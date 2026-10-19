@@ -1,0 +1,90 @@
+<ui:UiPage x:Class="Xeonstrap.UI.Elements.Settings.Pages.MorePage"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+           xmlns:resources="clr-namespace:Xeonstrap.Resources"
+           Title="{resources:Loc Ui_Nav_More}"
+           Scrollable="True">
+
+    <StackPanel Margin="{StaticResource AuroraPagePadding}">
+
+        <TextBlock Text="{resources:Loc Ui_Nav_More}"
+                   Style="{StaticResource AuroraDisplayStyle}"
+                   FontSize="24" />
+        <TextBlock Margin="0,6,0,18"
+                   Style="{StaticResource AuroraPageSubtitleStyle}"
+                   Text="{resources:Loc Ui_Misc2_ExtraPagesGroupedUnderMoreIn}" />
+
+        <Button Style="{StaticResource AuroraCardButtonStyle}" Margin="0,0,0,10" Click="OpenGlobal_Click">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Border Width="38" Height="38" CornerRadius="10"
+                        Background="{DynamicResource SubtleFillColorSecondaryBrush}">
+                    <ui:SymbolIcon Symbol="GlobeLocation20" FontSize="17"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Foreground="{DynamicResource AuroraAccentHoverBrush}" />
+                </Border>
+                <StackPanel Grid.Column="1" Margin="14,0,12,0" VerticalAlignment="Center">
+                    <TextBlock Text="{resources:Loc Ui_Nav_Global}" Style="{StaticResource AuroraBodyStyle}" FontWeight="SemiBold" />
+                    <TextBlock Margin="0,3,0,0" Style="{StaticResource AuroraMutedStyle}"
+                               Text="{resources:Loc Ui_Misc2_EditRobloxSOwnInGame}" />
+                </StackPanel>
+                <ui:SymbolIcon Grid.Column="2" Symbol="ArrowRight24" FontSize="13"
+                               VerticalAlignment="Center"
+                               Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+            </Grid>
+        </Button>
+
+        <Button Style="{StaticResource AuroraCardButtonStyle}" Margin="0,0,0,10" Click="OpenShortcuts_Click">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Border Width="38" Height="38" CornerRadius="10"
+                        Background="{DynamicResource SubtleFillColorSecondaryBrush}">
+                    <ui:SymbolIcon Symbol="Apps24" FontSize="17"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Foreground="{DynamicResource AuroraAccentHoverBrush}" />
+                </Border>
+                <StackPanel Grid.Column="1" Margin="14,0,12,0" VerticalAlignment="Center">
+                    <TextBlock Text="{resources:Loc Common_Shortcuts}" Style="{StaticResource AuroraBodyStyle}" FontWeight="SemiBold" />
+                    <TextBlock Margin="0,3,0,0" Style="{StaticResource AuroraMutedStyle}"
+                               Text="{resources:Loc Menu_Shortcuts_Description}" />
+                </StackPanel>
+                <ui:SymbolIcon Grid.Column="2" Symbol="ArrowRight24" FontSize="13"
+                               VerticalAlignment="Center"
+                               Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+            </Grid>
+        </Button>
+
+        <Button Style="{StaticResource AuroraCardButtonStyle}" Click="OpenNews_Click">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Border Width="38" Height="38" CornerRadius="10"
+                        Background="{DynamicResource SubtleFillColorSecondaryBrush}">
+                    <ui:SymbolIcon Symbol="News20" FontSize="17"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Foreground="{DynamicResource AuroraAccentHoverBrush}" />
+                </Border>
+                <StackPanel Grid.Column="1" Margin="14,0,12,0" VerticalAlignment="Center">
+                    <TextBlock Text="{resources:Loc Ui_Nav_News}" Style="{StaticResource AuroraBodyStyle}" FontWeight="SemiBold" />
+                    <TextBlock Margin="0,3,0,0" Style="{StaticResource AuroraMutedStyle}"
+                               Text="{resources:Loc Ui_Misc2_ReadXeonstrapNewsUpdatesAndForum}" />
+                </StackPanel>
+                <ui:SymbolIcon Grid.Column="2" Symbol="ArrowRight24" FontSize="13"
+                               VerticalAlignment="Center"
+                               Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+            </Grid>
+        </Button>
+    </StackPanel>
+</ui:UiPage>

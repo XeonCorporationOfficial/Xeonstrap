@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<OutputType>Exe</OutputType>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>latest</LangVersion>
+		<RootNamespace>Xeonstrap.Desktop.Linux</RootNamespace>
+		<AssemblyName>Xeonstrap</AssemblyName>
+		<RuntimeIdentifiers>linux-x64;linux-arm64;linux-musl-x64;linux-musl-arm64</RuntimeIdentifiers>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Avalonia.Wayland" Version="12.1.4" />
+		<ProjectReference Include="..\Xeonstrap.Desktop\Xeonstrap.Desktop.csproj" />
+		<ProjectReference Include="..\Xeonstrap.Platform.Linux\Xeonstrap.Platform.Linux.csproj" />
+	</ItemGroup>
+</Project>

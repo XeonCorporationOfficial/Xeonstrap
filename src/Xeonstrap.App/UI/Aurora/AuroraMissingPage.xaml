@@ -1,0 +1,28 @@
+<Page
+    x:Class="Xeonstrap.UI.Aurora.AuroraMissingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="Not available">
+
+    <Grid Margin="{StaticResource AuroraPagePadding}">
+        <Border Style="{StaticResource AuroraCardStyle}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                MaxWidth="520">
+            <StackPanel>
+                <ui:SymbolIcon Symbol="Info24"
+                               FontSize="22"
+                               HorizontalAlignment="Left"
+                               Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+                <TextBlock x:Name="Heading"
+                           Margin="0,12,0,0"
+                           Style="{StaticResource AuroraDisplayStyle}"
+                           FontSize="19" />
+                <TextBlock Margin="0,6,0,0"
+                           Style="{StaticResource AuroraMutedStyle}"
+                           Text="This surface has not been ported to the Aurora shell yet. Open the previous interface to use it in the meantime." />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

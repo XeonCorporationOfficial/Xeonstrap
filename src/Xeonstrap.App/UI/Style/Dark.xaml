@@ -1,0 +1,17 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:base="clr-namespace:Xeonstrap.UI.Elements.Base">
+  <!-- Xeon Aurora, dark. The shell gradient sweeps dark violet, violet bloom, deep ink. -->
+  <SolidColorBrush x:Key="NewTextEditorBackground" Color="#CC130D22" />
+  <SolidColorBrush x:Key="NewTextEditorForeground" Color="#FFEDE9FF" />
+  <SolidColorBrush x:Key="NewTextEditorLink" Color="#FF9B82FF" />
+  <SolidColorBrush x:Key="PrimaryBackgroundColor" Color="#FF0B0714" />
+  <Color x:Key="ControlFillColorDefault">#0FB9A5FF</Color>
+  <Color x:Key="WindowBackgroundColorPrimary">#FF0B0714</Color>
+  <Color x:Key="WindowBackgroundColorSecondary">#FF1C1038</Color>
+  <Color x:Key="WindowBackgroundColorThird">#FF0E0A1C</Color>
+  <Color x:Key="WindowBackgroundColorTertiary">#FF0E0A1C</Color>
+  <Color x:Key="WindowBackgroundColorPrimaryWithOpacity">#800B0714</Color>
+  <Color x:Key="WindowBackgroundColorSecondaryWithOpacity">#801C1038</Color>
+  <Color x:Key="WindowBackgroundColorThirdWithOpacity">#800E0A1C</Color>
+  <Color x:Key="WindowBackgroundColorTertiaryWithOpacity">#800E0A1C</Color>
+  <Color x:Key="ComboBoxPopupAcrylicBackground">#FF171029</Color>
+</ResourceDictionary>

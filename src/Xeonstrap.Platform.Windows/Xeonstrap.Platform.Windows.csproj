@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows10.0.17763.0</TargetFramework>
+		<SupportedOSPlatformVersion>10.0.14393.0</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>latest</LangVersion>
+		<RootNamespace>Xeonstrap.Platform.Windows</RootNamespace>
+		<AssemblyName>Xeonstrap.Platform.Windows</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="ZstdSharp.Port" Version="0.8.8" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Xeonstrap.Core\Xeonstrap.Core.csproj" />
+		<ProjectReference Include="..\Xeonstrap.Platform.Abstractions\Xeonstrap.Platform.Abstractions.csproj" />
+	</ItemGroup>
+</Project>

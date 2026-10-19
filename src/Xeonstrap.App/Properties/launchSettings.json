@@ -1,0 +1,43 @@
+{
+    "profiles": {
+        "Xeonstrap (Launch)": {
+            "commandName": "Project"
+        },
+        "Xeonstrap (Quiet Launch)": {
+            "commandName": "Project",
+            "commandLineArgs": "-quiet"
+        },
+        "Xeonstrap (Install)": {
+            "commandName": "Project",
+            "commandLineArgs": "-install"
+        },
+        "Xeonstrap (Uninstall)": {
+            "commandName": "Project",
+            "commandLineArgs": "-uninstall"
+        },
+        "Xeonstrap (Quiet Uninstall)": {
+            "commandName": "Project",
+            "commandLineArgs": "-uninstall -quiet"
+        },
+        "Xeonstrap (Menu)": {
+            "commandName": "Project",
+            "commandLineArgs": "-menu"
+        },
+        "Xeonstrap (Deeplink)": {
+            "commandName": "Project",
+            "commandLineArgs": "-player \"roblox://experiences/start?placeId=286090429\""
+        },
+        "Xeonstrap (Studio Launch)": {
+            "commandName": "Project",
+            "commandLineArgs": "-studio"
+        },
+        "Xeonstrap (Watcher)": {
+            "commandName": "Project",
+            "commandLineArgs": "-watcher"
+        },
+        "Xeonstrap (Bloxshade)": {
+            "commandName": "Project",
+            "commandLineArgs": "-bloxshade"
+        }
+    }
+}

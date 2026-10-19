@@ -1,0 +1,168 @@
+<Page
+    x:Class="Xeonstrap.UI.Aurora.AuroraHomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="Home"
+    ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="{StaticResource AuroraPagePadding}">
+        <Grid MaxWidth="980" HorizontalAlignment="Left">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- ============================ Hero ============================ -->
+            <Border Grid.Row="0" Style="{StaticResource AuroraHeroStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel VerticalAlignment="Center">
+                        <Border Style="{StaticResource AuroraChipStyle}" HorizontalAlignment="Left" Margin="0,0,0,14">
+                            <StackPanel Orientation="Horizontal">
+                                <Ellipse Width="6" Height="6"
+                                         Margin="0,0,7,0"
+                                         VerticalAlignment="Center"
+                                         Fill="{DynamicResource SystemFillColorSuccessBrush}" />
+                                <TextBlock x:Name="HeroStatus" Style="{StaticResource AuroraChipTextStyle}" />
+                            </StackPanel>
+                        </Border>
+
+                        <TextBlock Text="Ready when you are."
+                                   Style="{StaticResource AuroraDisplayStyle}"
+                                   MaxWidth="440" />
+                        <TextBlock x:Name="HeroSubtitle"
+                                   Margin="0,8,0,0"
+                                   Style="{StaticResource AuroraPageSubtitleStyle}"
+                                   MaxWidth="440" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="28,0,0,0">
+                        <Button Style="{StaticResource AuroraPrimaryButtonStyle}"
+                                HorizontalAlignment="Stretch"
+                                Padding="26,12"
+                                Click="LaunchPlayer_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <ui:SymbolIcon Symbol="Play20" FontSize="14" Foreground="#FFFFFFFF" VerticalAlignment="Center" />
+                                <TextBlock Text="Launch Roblox" Margin="9,0,0,0" FontSize="13.5" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{StaticResource AuroraSecondaryButtonStyle}"
+                                Margin="0,8,0,0"
+                                HorizontalAlignment="Stretch"
+                                Padding="26,10"
+                                Click="LaunchStudio_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <ui:SymbolIcon Symbol="Code24" FontSize="13" VerticalAlignment="Center" />
+                                <TextBlock Text="Open Studio" Margin="9,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- ============================ Stats ============================ -->
+            <UniformGrid Grid.Row="1" Columns="3" Margin="0,16,0,0">
+                <Border Style="{StaticResource AuroraCardStyle}" Margin="0,0,12,0" Padding="18">
+                    <StackPanel>
+                        <TextBlock Text="Channel" Style="{StaticResource AuroraSectionTitleStyle}" Margin="0,0,0,6" />
+                        <TextBlock x:Name="ChannelValue" Style="{StaticResource AuroraPageTitleStyle}" FontSize="19" />
+                        <TextBlock x:Name="ChannelHint" Style="{StaticResource AuroraMutedStyle}" Margin="0,2,0,0" />
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource AuroraCardStyle}" Margin="6,0,6,0" Padding="18">
+                    <StackPanel>
+                        <TextBlock Text="FastFlags" Style="{StaticResource AuroraSectionTitleStyle}" Margin="0,0,0,6" />
+                        <TextBlock x:Name="FlagsValue" Style="{StaticResource AuroraPageTitleStyle}" FontSize="19" />
+                        <TextBlock x:Name="FlagsHint" Style="{StaticResource AuroraMutedStyle}" Margin="0,2,0,0" />
+                    </StackPanel>
+                </Border>
+                <Border Style="{StaticResource AuroraCardStyle}" Margin="12,0,0,0" Padding="18">
+                    <StackPanel>
+                        <TextBlock Text="This build" Style="{StaticResource AuroraSectionTitleStyle}" Margin="0,0,0,6" />
+                        <TextBlock x:Name="BuildValue" Style="{StaticResource AuroraPageTitleStyle}" FontSize="19" />
+                        <TextBlock x:Name="BuildHint" Style="{StaticResource AuroraMutedStyle}" Margin="0,2,0,0" />
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+
+            <!-- ============================ Shortcuts ============================ -->
+            <StackPanel Grid.Row="2" Margin="0,22,0,0">
+                <TextBlock Text="Jump to" Style="{StaticResource AuroraSectionTitleStyle}" />
+                <UniformGrid Columns="4">
+                    <Border Style="{StaticResource AuroraCardInteractiveStyle}"
+                            Margin="0,0,10,0"
+                            Padding="16"
+                            MouseLeftButtonUp="OpenFastFlags_Click"
+                            ToolTip="Presets for rendering, network and UI">
+                        <StackPanel>
+                            <ui:SymbolIcon Symbol="Settings28" FontSize="18" HorizontalAlignment="Left"
+                                           Foreground="{DynamicResource AuroraAccentBrush}" />
+                            <TextBlock Text="FastFlags" Style="{StaticResource AuroraBodyStyle}" FontWeight="SemiBold" Margin="0,10,0,0" />
+                            <TextBlock Text="Presets and per-flag control" Style="{StaticResource AuroraMutedStyle}" Margin="0,2,0,0" />
+                        </StackPanel>
+                    </Border>
+                    <Border Style="{StaticResource AuroraCardInteractiveStyle}"
+                            Margin="5,0,5,0"
+                            Padding="16"
+                            MouseLeftButtonUp="OpenAppearance_Click"
+                            ToolTip="Theme, background and interface scale">
+                        <StackPanel>
+                            <ui:SymbolIcon Symbol="Color24" FontSize="18" HorizontalAlignment="Left"
+                                           Foreground="{DynamicResource AuroraAccentBrush}" />
+                            <TextBlock Text="Appearance" Style="{StaticResource AuroraBodyStyle}" FontWeight="SemiBold" Margin="0,10,0,0" />
+                            <TextBlock Text="Theme, wallpaper, motion" Style="{StaticResource AuroraMutedStyle}" Margin="0,2,0,0" />
+                        </StackPanel>
+                    </Border>
+                    <Border Style="{StaticResource AuroraCardInteractiveStyle}"
+                            Margin="5,0,5,0"
+                            Padding="16"
+                            MouseLeftButtonUp="OpenMods_Click"
+                            ToolTip="Cursors, sounds, skyboxes and community mods">
+                        <StackPanel>
+                            <ui:SymbolIcon Symbol="WrenchScrewdriver20" FontSize="18" HorizontalAlignment="Left"
+                                           Foreground="{DynamicResource AuroraAccentBrush}" />
+                            <TextBlock Text="Mods" Style="{StaticResource AuroraBodyStyle}" FontWeight="SemiBold" Margin="0,10,0,0" />
+                            <TextBlock Text="Files, packs and overlays" Style="{StaticResource AuroraMutedStyle}" Margin="0,2,0,0" />
+                        </StackPanel>
+                    </Border>
+                    <Border Style="{StaticResource AuroraCardInteractiveStyle}"
+                            Margin="10,0,0,0"
+                            Padding="16"
+                            MouseLeftButtonUp="OpenManager_Click"
+                            ToolTip="Installed clients, updates and mirrors">
+                        <StackPanel>
+                            <ui:SymbolIcon Symbol="ArrowDownload24" FontSize="18" HorizontalAlignment="Left"
+                                           Foreground="{DynamicResource AuroraAccentBrush}" />
+                            <TextBlock Text="Manager" Style="{StaticResource AuroraBodyStyle}" FontWeight="SemiBold" Margin="0,10,0,0" />
+                            <TextBlock Text="Client installs and updates" Style="{StaticResource AuroraMutedStyle}" Margin="0,2,0,0" />
+                        </StackPanel>
+                    </Border>
+                </UniformGrid>
+            </StackPanel>
+
+            <!-- ============================ Tip ============================ -->
+            <Border Grid.Row="3" Style="{StaticResource AuroraCardStyle}" Margin="0,16,0,0" Padding="18">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <ui:SymbolIcon Symbol="Info24" FontSize="16" VerticalAlignment="Center"
+                                   Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+                    <StackPanel Grid.Column="1" Margin="12,0,0,0">
+                        <TextBlock Text="Keyboard" Style="{StaticResource AuroraBodyStyle}" FontWeight="SemiBold" />
+                        <TextBlock Style="{StaticResource AuroraMutedStyle}" Margin="0,3,0,0"
+                                   Text="Ctrl K searches every page, Ctrl 1 to 9 jumps between sections, and Alt Left goes back." />
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,17 @@
+<ui:UiPage x:Class="Xeonstrap.UI.Elements.Settings.Pages.ModGeneratorPage"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:pages="clr-namespace:Xeonstrap.UI.Elements.Settings.Pages"
+           xmlns:resources="clr-namespace:Xeonstrap.Resources"
+           xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+           Title="{resources:Loc Ui_ModGen_ModGenerator}"
+           ui:Breadcrumb.Header="{resources:Loc Ui_ModGen_ModGenerator}"
+           Scrollable="True">
+
+    <StackPanel Margin="{StaticResource AuroraPagePadding}">
+        <TextBlock Text="{resources:Loc Ui_ModGen_ModGenerator}" Style="{StaticResource AuroraDisplayStyle}" FontSize="24" />
+        <Border Style="{StaticResource AuroraCardStyle}" Margin="0,14,0,0" Padding="18">
+            <pages:ModGeneratorSection Margin="0,0,0,0" />
+        </Border>
+    </StackPanel>
+</ui:UiPage>

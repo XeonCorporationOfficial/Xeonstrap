@@ -1,0 +1,29 @@
+﻿<Project>
+
+	<PropertyGroup>
+		<XeonstrapVersion>1.0.0.0</XeonstrapVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(XeonstrapLinuxPackagingRoot)' != ''">
+		<BaseOutputPath>$(XeonstrapLinuxPackagingRoot)bin/$(MSBuildProjectName)/</BaseOutputPath>
+		<BaseIntermediateOutputPath>$(XeonstrapLinuxPackagingRoot)obj/$(MSBuildProjectName)/</BaseIntermediateOutputPath>
+		<DefaultItemExcludes>$(DefaultItemExcludes);bin/**;bin-*/**;bin-cross/**;obj/**;obj-*/**</DefaultItemExcludes>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(XeonstrapLinuxPackagingRoot)' != '' And $(MSBuildProjectName.StartsWith('Xeonstrap.Cross'))">
+		<BaseOutputPath>$(XeonstrapLinuxPackagingRoot)bin/Xeonstrap.Cross/</BaseOutputPath>
+		<BaseIntermediateOutputPath>$(XeonstrapLinuxPackagingRoot)obj/Xeonstrap.Cross/</BaseIntermediateOutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Version Condition="'$(Version)' == ''">$(XeonstrapVersion)</Version>
+		<FileVersion>$(Version)</FileVersion>
+		<AssemblyVersion>$(Version)</AssemblyVersion>
+		<InformationalVersion>$(Version)</InformationalVersion>
+	</PropertyGroup>
+
+</Project>

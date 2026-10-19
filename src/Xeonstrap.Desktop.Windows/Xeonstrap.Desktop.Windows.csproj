@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows10.0.17763.0</TargetFramework>
+		<SupportedOSPlatformVersion>10.0.14393.0</SupportedOSPlatformVersion>
+		<OutputType>WinExe</OutputType>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>latest</LangVersion>
+		<RootNamespace>Xeonstrap.Desktop.Windows</RootNamespace>
+		<AssemblyName>Xeonstrap.Desktop.Windows</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Xeonstrap.Desktop\Xeonstrap.Desktop.csproj" />
+		<ProjectReference Include="..\Xeonstrap.Platform.Windows\Xeonstrap.Platform.Windows.csproj" />
+	</ItemGroup>
+</Project>
