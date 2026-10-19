@@ -72,7 +72,7 @@ curl -fsSL https://xeonstrapp.pages.dev/install.sh | sh
 > [!WARNING]
 > Xeonstrap is not an exploit and never will be. We are not considered an exploit. We are here to give users more freedom, features, and support for Roblox.
 >
-> As of Xeonstrap Version `1.1.2.3`, Multi-Instance Launching has been removed from the app and will not be added back in the future.
+> As of Xeonstrap Version `1.0.0.0`, Multi-Instance Launching has been removed from the app and will not be added back in the future.
 
 ## Features
 
